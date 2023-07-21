@@ -24,3 +24,29 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+string[] array = new string[7] { "1185", "12", "484", "27", "942", "7", "65843" };
+string[] array1 = new string[array.Length];
+
+void NewArray(string[] array, string[] array1)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            array1[count] = array[i];
+            count++;
+        }
+    }
+}
+void PrintArray(string[] array1)
+{
+    for (int i = 0; i < array1.Length; i++)
+    {
+        Console.Write(array1[i] + "   ");
+    }
+    Console.WriteLine();
+}
+NewArray(array, array1);
+PrintArray(array1);
